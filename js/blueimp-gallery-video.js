@@ -78,6 +78,7 @@
                 isLoading,
                 hasControls;
             videoContainer.addClass(options.videoContentClass);
+            video.preload = 'none';
             if (title) {
                 videoContainerNode.title = title;
             }
