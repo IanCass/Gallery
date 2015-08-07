@@ -49,7 +49,8 @@
         handleSlide: function (index) {
             handleSlide.call(this, index);
             if (this.playingVideo) {
-                this.playingVideo.pause();
+                this.playingVideo.load();
+                delete this.playingVideo;
             }
         },
 
@@ -123,7 +124,6 @@
                         if (hasControls) {
                             that.container.addClass(that.options.controlsClass);
                         }
-                        delete that.playingVideo;
                         if (that.interval) {
                             that.play();
                         }
